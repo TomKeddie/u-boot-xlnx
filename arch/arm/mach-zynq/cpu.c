@@ -61,3 +61,13 @@ void enable_caches(void)
 	dcache_enable();
 }
 #endif
+
+#ifdef CONFIG_DISPLAY_CPUINFO
+int print_cpuinfo(void)
+{
+       unsigned int ver = zynq_get_silicon_version();
+        printf("CPU:   ZYNQ silicon version %d\n", ver);
+        return 0;
+}
+#endif /* CONFIG_DISPLAY_CPUINFO */
+

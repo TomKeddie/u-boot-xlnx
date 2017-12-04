@@ -8,6 +8,8 @@ SUBLEVEL =
 EXTRAVERSION =
 NAME =
 
+CROSS_COMPILE=armr5-none-eabi-
+
 # *DOCUMENTATION*
 # To see a list of typical targets execute "make help"
 # More info can be located in ./README
@@ -349,7 +351,8 @@ OBJDUMP		= $(CROSS_COMPILE)objdump
 AWK		= awk
 PERL		= perl
 PYTHON		= python
-DTC		= dtc
+DTC             = ../../kernel.org/dtc/dtc
+
 CHECK		= sparse
 
 CHECKFLAGS     := -D__linux__ -Dlinux -D__STDC__ -Dunix -D__unix__ \
